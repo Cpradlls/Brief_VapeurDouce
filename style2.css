@@ -1,0 +1,247 @@
+/* GENERAL LAYOUT */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: 'roboto';
+}
+
+h1 {
+    display: none;
+}
+
+input {
+    font-family: 'roboto';
+}
+
+/* GENERAL COLORS */
+
+html {
+    background-color: #222831;
+}
+
+h2 {
+    color: #ffd369;
+}
+
+.barreSearch {
+    background-color: #eeeeee;
+    border: none;
+}
+
+.btnSearch {
+    background-color: #ffd369;
+    border: none;
+
+}
+
+.container2 {
+    color: #eeeeee;
+}
+
+.lien {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+footer p {
+    color: #eeeeee;
+}
+
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 15vw 85vw;
+        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-areas: 
+        "header search"
+        "header result"
+        "header footer";
+    }
+
+    header {
+        grid-area: header;
+        display: grid;
+        align-items: end;
+        padding-left: 2vw;
+        padding-bottom: 2vh;
+    }
+
+    .imgDesktop {
+        height: 80vh;
+        
+    }
+
+    .imgMobile {
+        display: none;
+    }
+
+    .container1 {
+        grid-area: search;
+        display: grid;
+        justify-content: end;
+        padding-right: 6vw;
+    }
+
+    .barreSearch {
+        border-radius: 10px;
+        width: 30vw;
+        height: 5vh;
+        padding-left: 1vw;
+    }
+
+    .btnSearch {
+        border-radius: 10px;
+        width: 9vw;
+        height: 5vh;
+        margin-left: 1vw;
+        font-size: 1vw;
+    }
+
+    .container2 {
+        grid-area: result;
+        background-color: #393e46;
+        margin-top: 2vh;
+        margin-right: 15vw;
+        margin-bottom: 5vh;
+    }
+
+    .contenu {
+        background-color: #484c57;
+        padding-left: 2vh;
+        padding-top: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 5vh;
+    }
+
+    h2 {
+        padding-bottom: 3vh;
+    }
+
+    .contenu p {
+        padding-bottom: 3vh;
+    }
+
+
+    footer {
+        grid-area: footer;
+        display: grid;
+        align-items: end;
+        padding-left: 24vw;
+        font-size: 1vw;
+    }
+
+    footer p {
+        padding-bottom: 1vh;
+    }
+
+    footer .first {
+        padding-left: 17vh;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 20vh 50vh 10vh;
+        grid-template-areas: 
+        "header"
+        "search"
+        "result"
+        "footer";
+    }
+
+    .imgDesktop {
+        display: none;
+    }
+
+    .imgMobile {
+        width: 80vw;
+    }
+
+    header {
+        grid-area: header;
+        display: grid; 
+        justify-content: center;
+        align-items: end;
+        padding-bottom: 5vh;
+    }
+
+    .container1 {
+        grid-area: search;
+        border-radius: 10px;
+        display: grid;
+        justify-content: center;
+    }
+
+    .barreSearch {
+        border-radius: 10px;
+        width: 80vw;
+        height: 5vh;
+        padding-left: 2vw;
+        display: grid;
+        justify-content: center;
+
+    }
+
+    .btnSearch {
+        border-radius: 10px;
+        width: 30vw;
+        height: 5vh;
+        margin-left: 25vw;
+        margin-top: 2vh;
+    }
+
+    .container2 {
+        grid-area: result;
+        border-radius: 10px;
+        background-color: #393e46;
+        margin-top: 2vh;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-bottom: 5vh;
+    }
+
+    .contenu {
+        background-color: #484c57;
+        padding-left: 2vh;
+        padding-top: 3vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-top: 5vh;
+    }
+
+    h2 {
+        padding-bottom: 3vh;
+    }
+
+    .contenu p {
+        padding-bottom: 3vh;
+    }
+
+    footer {
+        grid-area: footer;
+        display: grid;
+        align-items: end;
+        justify-content: center;
+    }
+
+    footer p {
+        padding-bottom: 1vh;
+    }
+
+
+
+}
